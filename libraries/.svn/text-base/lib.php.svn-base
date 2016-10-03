@@ -1,0 +1,21 @@
+<?php
+
+$title 			= ".: Badan Penanaman Modal :.";
+$icon 			= "img/images/icon.png";
+$path 			= "index/view/";
+$style_body 	= $path.'style_body.php';
+$background     = $path.'background.php';
+$banner 		= $path.'banner.php';
+$tengah 		= $path.'tengah.php';
+$visitor 		= $path.'visitor.php';
+$sidebar_login  = $path.'sidebar_login.php';
+$footer			= $path.'footer.php';
+$bawah			= $path.'bawah.php';
+
+function count_data($table, $where){
+		$query = mysql_query("select count(*) as jumlah from $table where $where");
+		$row = mysql_fetch_object($query);
+		return $row->jumlah;
+	}
+
+?>

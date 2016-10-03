@@ -1,0 +1,129 @@
+10
+
+dir
+27
+http://192.168.1.192:81/svn/bpm/img
+http://192.168.1.192:81/svn/bpm
+
+
+
+2013-10-14T02:40:24.694059Z
+26
+candra
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f0ed865e-27fc-4061-892d-059d8d9b356d
+
+img_news_city
+dir
+
+img_user.php
+file
+
+
+
+
+2013-10-11T07:44:09.523688Z
+b655b7527df2d928dd09e73c57c910a3
+2013-09-06T10:31:40.249695Z
+1
+ade
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+373
+
+img_banner
+dir
+
+img_menus
+dir
+
+images
+dir
+
+img_publication
+dir
+
+img_news
+dir
+
+img_user
+dir
+
+images.php
+file
+
+
+
+
+2013-10-11T07:44:09.533689Z
+818dd290fa74c96ea358b1a0df8d4ddc
+2013-09-06T10:31:40.249695Z
+1
+ade
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+393
+
+img_album
+dir
+
+img_news_menu
+dir
+
+images_admin
+dir
+
+img_slider
+dir
+
