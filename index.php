@@ -36,7 +36,7 @@ include 'libraries/lib.php';
 <script src="scripts/jquery.twitter.js"></script>
 <script src="scripts/jquery.modernizr.js"></script>
 <script src="scripts/jquery.easing.1.3.js"></script>
-<script src="scripts/jquery.contact.js"></script>
+<!-- <script src="scripts/jquery.contact.js"></script> -->
 <script src="scripts/jquery.isotope.min.js"></script>
 <script src="scripts/jquery.jcarousel.js"></script>
 <script src="scripts/jquery.fancybox.min.js"></script>
@@ -65,6 +65,7 @@ include 'libraries/lib.php';
    }
    skyscanner.setOnLoadCallback(main);
 </script>
+<script src="js/validasi.js"></script>
 
 </head>
 <body style="top:0px !important;">

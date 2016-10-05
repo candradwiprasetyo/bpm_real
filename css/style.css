@@ -3690,6 +3690,8 @@ span.time {
 
 #contact fieldset div input { width: 220px; }
 
+#contact fieldset div select { width: 240px;  -webkit-appearance:none;}
+
 #contact textarea {
 	max-width: 620px;
 	min-width: 620px;
@@ -4979,6 +4981,11 @@ input[type=search][type=search]::-webkit-input-placeholder {
 }
 .list-kabupaten .desc{
 	padding: 10px;
+}
+
+.err2{
+	color:#c0392b;
+	font-weight: bold;
 }
 
 @media only screen and (max-width: 768px) {
