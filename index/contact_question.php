@@ -42,9 +42,9 @@
 				</ul>
 
 				<ul class="contact-informations second">
-					<li><i class="halflings headphones"></i> <p>031-3537537</p></li>
+					<li><i class="halflings phone"></i> <p>031-3537537</p></li>
 					<li><i class="halflings icon-fax"></i>031-3531008</li>
-					<li><i class="halflings envelope"></i> <p>support@example.com</p></li>
+					<li><i class="halflings envelope"></i> <p>invest@bpm.jatimprov.go.id</p></li>
 					<li><i class="halflings globe"></i> <p>bpm.jatimprov.go.id</p></li>
 				</ul>
 
@@ -70,9 +70,14 @@
 		<!-- Contact Form -->
 				<section class="page-content">
 
+				<?php if(isset($_GET['did']) && $_GET['did']==1){ ?>
 				<div class="notification notice closeable" style="margin: 0px 0px 40px; display: block;" id="notification_1">
-			<p>Terima kasih. Pertanyaan Anda akan segera kami tanggapi</p>
-		<a class="close" href="#"><i class="icon-remove"></i></a></div>
+					<p>Terima kasih. Pertanyaan Anda akan segera kami tanggapi</p>
+						<a class="close" href="#"><i class="icon-remove"></i></a>
+				</div>
+				<?php
+				}
+				?>
 
 			<h3 class="margin">Form pertanyaan</h3>
 			

@@ -4988,6 +4988,100 @@ input[type=search][type=search]::-webkit-input-placeholder {
 	font-weight: bold;
 }
 
+/*-----------chart ------------*/
+.statistik{
+	
+	width:40px;
+	text-align:center;
+	color:#fff;
+	font-weight:bold;
+}
+.statistik_frame{
+	width:38px;
+	border:1px dotted #ccc;
+	background-color:#f7f7f7;
+	margin-top:0px;
+	color:#551F00
+}
+
+.chart{
+	vertical-align:bottom;
+	height:320px;
+	width:110px;
+	margin-right:30px;
+	color:#9F9F9F;
+	float:left;	
+}
+
+.chart1{
+	width:30px;
+	background-color:#5F8B95;
+	float:left;
+	margin-right:5px;
+}
+
+.chart2{
+	width:30px;
+	background-color:#BA4D51;
+	float:left;
+	margin-right:5px;
+
+}
+.chart3{
+	width:30px;
+	background-color:#AF8A53;
+	float:left;
+}
+.isi_chart1{
+	text-align:center;
+	color:#fff;
+	background-color:#5F8B95;
+	width:30px;
+	height:25px;
+	float:left;
+	margin-bottom:5px;
+	border-radius:16px;
+	padding-top:4px;
+}
+
+.isi_chart2{
+	text-align:center;
+	color:#fff;
+	background-color:#BA4D51;
+	width:30px;
+	height:25px;
+	float:left;
+	margin-bottom:5px;
+	border-radius:16px;
+	padding-top:4px;
+}
+.isi_chart3{
+	text-align:center;
+	color:#fff;
+	background-color:#AF8A53;
+	width:30px;
+	height:25px;
+	float:left;
+	margin-bottom:5px;
+	border-radius:16px;
+	padding-top:4px;
+}
+.bulan1{
+	width:15px;
+	height:15px;
+	background-color:#5F8B95;
+}
+.bulan2{
+	width:15px;
+	height:15px;
+	background-color:#BA4D51;
+}
+.bulan3{
+	width:15px;
+	height:15px;
+	background-color:#AF8A53;
+}
+
 @media only screen and (max-width: 768px) {
 	.top-navbar{
 		display: none;
