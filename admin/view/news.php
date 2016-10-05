@@ -1,0 +1,293 @@
+<?php 
+if(isset($_GET['err']) && $_GET['err']==1){ 
+?>
+<div class="err">Isi data dengan lengkap dan benar</div>
+<br />
+<?php 
+}else if(isset($_GET['did']) && $_GET['did']==1){ 
+?>
+<div class="did">Simpan berhasil</div>
+<br />
+<?php 
+}else if(isset($_GET['did']) && $_GET['did']==2){ 
+?>
+<div class="did">Edit berhasil</div>
+<br />
+<?php 
+}else if(isset($_GET['did']) && $_GET['did']==3){ 
+?>
+<div class="did">Hapus berhasil</div>
+<br />
+<?php 
+}else if(isset($_GET['did']) && $_GET['did']==4){ 
+?>
+<div class="did">Data ditampilkan</div>
+<br />
+<?php 
+}else if(isset($_GET['did']) && $_GET['did']==5){ 
+?>
+<div class="did">Data tidak ditampilkan</div>
+<br />
+<?php 
+}
+?>
+
+<?php
+if($_GET['news_id'] || $_GET['add'] == 1){
+$q_data = mysql_query("select * from news where news_id = '".$_GET['news_id']."'");
+$go = mysql_fetch_object($q_data);
+
+?>
+<?php
+$page = $_GET['page'];
+
+$kategori = array(0=>'Kinerja Investasi', 1=>'Pejabat Pengelola Informasi & Dokumentasi',2=>'Berita',3=>'Agenda Kegitan',4=>'Peraturan Terkait'); # jangan lupa set up variabel $x untuk memunculkan datanya
+
+?>
+
+
+	
+<script language="JavaScript" type="text/javascript" src="js/cbrte/html2xhtml.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/cbrte/richtext_compressed.js"></script>
+<form name="RTEDemo" method="post" enctype="multipart/form-data" action="<?php if($_GET['news_id']){ echo "admin/controller/news.php?req=edit&news_id=$_GET[news_id]"; }else{ echo "admin/controller/news.php?req=save"; } ?>" class="form" onsubmit="return submitForm();">
+ <table width="100%" border="0" cellspacing="0" cellpadding="4">
+    <tr>
+    	<td>KATEGORI</td>
+    	<td><select name="i_cat" id="i_cat" class="list">
+    		<?php
+    			for ($x=0;$x<=4;$x++){
+					if($x!=2){
+						if($x == $go->news_cat_id){
+							$tampilkan ='selected="selected"';
+						}else{
+							$tampilkan = '';
+						}
+						echo "<option value='$x' $tampilkan >$kategori[$x]</option>";
+					}
+    			}
+    		?>
+    		
+    		</select>
+    	</td>
+    <tr>
+    	<td>Tampilkan</td>
+    	<td><input type="checkbox" name="i_show" value="1" id="i_show"
+    		<?php
+    		if ($go->active_status == 1){
+    			echo 'checked=""';
+    		}
+    		 ?>
+    		 /></td>
+    
+    </tr>
+    <tr>
+      <td width="20%">Judul</td>
+      <td><input name="news_title" type="text" id="news_title" value="<?php echo $go->news_title ?>" class="field" />
+      <input name="img_id" type="hidden" class="field" id="img_id" value="<?php echo $go->img_id ?>" size="10" /></td>
+    </tr>
+    <tr>
+      <td width="20%" valign="top">Deskripsi Index</td>
+      <td><textarea name="news_desc_index" id="news_desc_index" cols="45" rows="5" class="area"><?php echo $go->news_desc_index ?></textarea></td>
+  </tr>
+     <tr>
+      <td>Foto</td>
+      <td>
+	  <?php
+	  if($_GET['news_id']){ ?>
+      <img src="<?php echo $go->news_img ?>" height="100" /><br />
+	  <?php } ?>
+      <input type="file" name="img" id="img" /></td>
+    </tr>
+    <tr>
+      <td>&nbsp;</td>
+      <td>
+	  
+    </td>
+    </tr>
+  
+  </table>
+  
+<script language="JavaScript" type="text/javascript">
+<!--
+function submitForm() {
+	//make sure hidden and iframe values are in sync for all rtes before submitting form
+	updateRTEs();
+	
+	return true;
+}
+
+//Usage: initRTE(imagesPath, includesPath, cssFile, genXHTML, encHTML)
+initRTE("js/cbrte/images/", "js/cbrte/", "", true);
+//-->
+</script>
+<noscript><p><b>Javascript must be enabled to use this form.</b></p></noscript>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+//build new richTextEditor
+var rte1 = new richTextEditor('rte1');
+<?php
+//format content for preloading
+if (!(isset($_POST["rte1"]))) {
+	$content = $go->news_content;
+	$content = rteSafe($content);
+} else {
+	//retrieve posted value
+	$content = rteSafe($_POST["rte1"]);
+}
+?>
+rte1.html = '<?=$content;?>';
+//rte1.toggleSrc = false;
+rte1.build();
+//-->
+</script>
+<br />
+
+<table width="100%">
+   <?php if($_GET['news_id']){ ?>
+    <tr>
+     <td colspan="2" align="left">
+       <table width="100%" border="0" cellspacing="0" cellpadding="4">
+         <tr>
+           <td width="69%"><input type="submit" name="button" id="button" value="  Edit  " class="button_new" ></td>
+          </tr>
+        </table>
+    </tr>
+    <?php }else{ ?>
+    <tr>
+      <td colspan="2" align="left"><input type="submit" name="button" id="button" value="Simpan"  class="button_new" ></td>
+    </tr>
+    <?php } ?>
+</table>
+
+</form>
+<br />
+<?php
+}else{
+?>
+<table width="100%" border="0" cellspacing="0" cellpadding="2" class="table">
+    <tr class="judul">
+      <td width="9%" height="30">&nbsp;</td>
+         <td width="20%" height="30">Kategori</td>
+      <td width="30%">Judul</td>
+      <td width="19%">Tanggal</td>
+      <td width="17%" align="center">Config</td>
+    </tr>
+    <?php
+	if (isset($_GET['pageno2'])) {
+   $pageno2 = $_GET['pageno2'];
+} else {
+   $pageno2 = 1;
+}
+
+$where = '';
+if($_POST['search_field']){
+  $where = "where news_title like '%".$_POST['search_field']."%'"; 
+  }
+
+
+$query = "SELECT count(*) FROM news $where order by news_id DESC ";
+$result = mysql_query($query);
+$query_data = mysql_fetch_row($result);
+$numrows = $query_data[0];
+
+$rows_per_page = 10;
+$lastpage      = ceil($numrows/$rows_per_page);
+
+$pageno2 = (int)$pageno2;
+if ($pageno2 > $lastpage) {
+   $pageno2 = $lastpage;
+} 
+if ($pageno2 < 1) {
+   $pageno2 = 1;
+} 
+
+$limit = 'LIMIT ' .($pageno2 - 1) * $rows_per_page .',' .$rows_per_page;
+$query = "SELECT * FROM news $where order by news_id DESC $limit";
+$result = mysql_query($query);
+$i = 1;
+while($b=mysql_fetch_array($result)){
+		$kategori = array(0=>'Kinerja Investasi', 1=>'Pejabat Pengelola Informasi & Dokumentasi',2=>'Berita',3=>'Agenda Kegitan',4=>'Peraturan Terkait');
+	?>
+  
+    <tr <?php if($i%2==1){ echo "class='tr'"; }else{ echo "class='tr2'"; } ?>>
+      <td height="28" class="td"><img src="<?php echo $b['news_img'] ?>"  class="tr_img"/></td>
+       <td height="28" class="td"><?php echo $kategori[$b['news_cat_id']] ?></td>
+      <td  class="td"><?php echo $b[1] ?></td>
+      <td class="td"><?php echo $b[4] ?></td>
+      <td  class="td">
+      <a href="javascript:void(0)" onclick="confirm_delete(<?php echo $b[0]; ?>,'admin/controller/news.php?req=delete&news_id=')"><div class="trash"></div></a>
+     <a href="admin.php?page=admin/view/news&news_id=<?php echo $b[0] ?>"><div class="edit"></div></a>
+        <?php if($b['active_status'] == 0){?>
+      <a href="admin/controller/news.php?req=act&news_id=<?php echo $b[0] ?>" title="Tampilkan"><div class="act"></div></a>
+      <?php
+	 }else{
+	  ?>
+       <a href="admin/controller/news.php?req=deact&news_id=<?php echo $b[0] ?>" title="Tidak ditampilkan"><div class="deact"></div></a>
+      <?php
+	 }
+	  ?>
+      </td>
+    </tr>
+  
+    <?php
+	
+	$i++;
+	}
+	?>
+    
+    
+  </table>
+
+  <div class="page_kanan">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td><?php
+if ($pageno2 == 1) {
+   echo "<div class=\"page_first_non\"> </div>";
+   echo "<div class=\"page_prev_non\"> </div>";
+} else {
+   echo "<a href='{$_SERVER['PHP_SELF']}?page=admin/view/news&pageno2=1'><div class=\"page_first\"></div></a> ";
+   $prevpage = $pageno2-1;
+   echo "<a href='{$_SERVER['PHP_SELF']}?page=admin/view/news&pageno2=$prevpage'><div class=\"page_prev\"></div> </a>";
+} // if
+
+echo "<div class=\"page_page\">  Halaman ke $pageno2 dari $lastpage </div> ";
+
+if ($pageno2 == $lastpage) {
+    echo "<div class=\"page_next_non\"> </div>";
+   echo "<div class=\"page_last_non\"> </div>";
+} else {
+   $nextpage = $pageno2+1;
+   echo "<a href='{$_SERVER['PHP_SELF']}?page=admin/view/news&pageno2=$nextpage'><div class=\"page_next\"></div></a> ";
+   echo "<a href='{$_SERVER['PHP_SELF']}?page=admin/view/news&pageno2=$lastpage'><div class=\"page_last\"></div></a> ";
+} 
+
+?></td>
+      <td align="right" style="padding-right:5px;">Jumlah Data : <?php echo $numrows ?></td>
+    </tr>
+  </table>
+</div>
+<?php
+}
+function rteSafe($strText) {
+	//returns safe code for preloading in the RTE
+	$tmpString = $strText;
+	
+	//convert all types of single quotes
+	$tmpString = str_replace(chr(145), chr(39), $tmpString);
+	$tmpString = str_replace(chr(146), chr(39), $tmpString);
+	$tmpString = str_replace("'", "&#39;", $tmpString);
+	
+	//convert all types of double quotes
+	$tmpString = str_replace(chr(147), chr(34), $tmpString);
+	$tmpString = str_replace(chr(148), chr(34), $tmpString);
+//	$tmpString = str_replace("\"", "\"", $tmpString);
+	
+	//replace carriage returns & line feeds
+	$tmpString = str_replace(chr(10), " ", $tmpString);
+	$tmpString = str_replace(chr(13), " ", $tmpString);
+	
+	return $tmpString;
+}
+?>

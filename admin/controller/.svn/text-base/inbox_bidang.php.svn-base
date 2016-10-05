@@ -1,0 +1,27 @@
+<?php
+session_start();
+include '../../libraries/config.php';
+$req = $_GET['req'];
+switch($req){
+	case answer:
+	$user_id = $_SESSION['user_id'];
+	$id = $_GET['id'];
+	extract($_POST);
+	
+	if($jawaban == ""){
+		header("Location: ../../admin.php?page=admin/view/inbox_form_bidang&id=$id&err=1");
+	}else{
+		$Mysql->save("answers",
+					"('','$id', '$user_id', '$jawaban', '".date("Y-m-d H:m:s")."')");	
+					
+		$Mysql->edit("contact_questions","status='0'","id='$id'");			
+	header('Location: ../../admin.php?page=admin/view/inbox_bidang&did=1');
+	
+}
+	
+	break;
+	
+	
+}
+//header('Location: ../../admin.php?page=admin/view/inbox');
+?>

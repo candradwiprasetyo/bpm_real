@@ -1,0 +1,88 @@
+<?php
+session_start();
+include '../../libraries/config.php';
+$req = $_GET['req'];
+switch($req){
+	case answer:
+	$user_id = $_SESSION['user_id'];
+	$id = $_GET['id'];
+	extract($_POST);
+	
+	if($jawaban == ""){
+		header("Location: ../../admin.php?page=admin/view/inbox_form&id=$id&err=1");
+	}
+	else{
+	
+		$Mysql->save("answers",
+					"('','$id', '$user_id', '$jawaban', '".date("Y-m-d H:m:s")."')");	
+					
+		$Mysql->edit("contact_questions","status='0'","id='$id'");			
+		header('Location: ../../admin.php?page=admin/view/inbox&did=1');
+	}
+	break;
+	
+	case act:
+	$id = $_GET['id'];
+	
+	
+	$query = mysql_query("select status from contact_questions where id = '$id'");
+	$row = mysql_fetch_array($query);
+	
+	if($row['status'] == 1){
+		?>
+	<script>
+	alert("Silahkan jawab pertanyaan terlebih dahulu untuk menampilkan pertanyaan");
+	document.location = "../../admin.php?page=admin/view/inbox";
+	</script>
+	<?php
+	}else{
+	
+	extract($_POST);
+	
+		$Mysql->edit("contact_questions","active_status='1'","id='$id'");
+		header('Location: ../../admin.php?page=admin/view/inbox&did=4');
+	}
+		
+	break;
+	
+	case deact:
+	$id = $_GET['id'];
+	
+	extract($_POST);
+	
+		$Mysql->edit("contact_questions","active_status='0'","id='$id'");
+		
+		header('Location: ../../admin.php?page=admin/view/inbox&did=5');
+	break;
+	
+	case delete:
+	$id = $_GET['id'];
+	
+	$Mysql->delete("contact_questions","id ='$id'");
+	$Mysql->delete("forwards","question_id ='$id'");
+	$Mysql->delete("answers","question_id ='$id'");
+	header('Location: ../../admin.php?page=admin/view/inbox&did=3');
+	break;
+	
+	case forward:
+	$id = $_GET['id'];
+	$user_type_id = $_GET['user_type_id'];
+	
+	$cek_query = mysql_query("SELECT count(*) FROM forwards where user_type_id = '$user_type_id' and question_id = '$id'");
+	$cek_row = mysql_fetch_row($cek_query);
+	
+	if($cek_row[0] > 0){
+		header('Location: ../../admin.php?page=admin/view/inbox&err=7');
+	}else{
+	$Mysql->save("forwards",
+					"('','$user_type_id', '$id', '')");	
+	
+		//$Mysql->edit("contact_questions","active_status='0'","id='$id'");
+		
+		header('Location: ../../admin.php?page=admin/view/inbox&did=6');
+	}
+	break;
+	
+}
+//header('Location: ../../admin.php?page=admin/view/inbox');
+?>

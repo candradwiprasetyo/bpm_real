@@ -1,0 +1,60 @@
+<?php 
+if(isset($_GET['err']) && $_GET['err']==1){ 
+?>
+<div class="err">Isi jawaban dahulu</div>
+<br />
+<?php 
+}else if(isset($_GET['did']) && $_GET['did']==1){ 
+?>
+<div class="did">Simpan berhasil</div>
+<br />
+<?php 
+}
+?>
+<?php
+$page = $_GET['page'];
+$q = mysql_query("select * from contact_questions where id = '".$_GET['id']."'");
+$r = mysql_fetch_object($q);
+?>
+
+<form name="form1" method="post" enctype="multipart/form-data" action="admin/controller/inbox.php?req=answer&id=<?php echo $_GET['id']; ?>" class="form">
+  <table width="100%" border="0" cellspacing="0" cellpadding="4">
+    <tr>
+      <td width="20%">Subject</td>
+      <td><input name="subject" type="text" class="field" id="subject" value="<?php echo $r->judul_pesan?>" size="50" readonly="readonly" /></td>
+    </tr>
+   <tr>
+      <td valign="top">Deskripsi</td>
+      <td valign="top"><textarea name="pesan" cols="80" rows="5" readonly="readonly" id="pesan" class="area" style="width:500px;"><?php echo $r->pesan?></textarea>
+	  
+      </td>
+    </tr>
+     <tr>
+      <td valign="top">Jawaban</td>
+      <td valign="top"><textarea name="jawaban" id="jawaban" cols="80" rows="5" class="area" style="width:500px;"></textarea>
+	  
+      </td>
+    </tr>
+     <tr>
+      <td>Nama Pengirim</td>
+      <td><input name="nama" type="text" class="field" id="nama" value="<?php echo $r->nama ?>" size="50" readonly="readonly" />
+	  
+      </td>
+    </tr>
+     <tr>
+      <td>&nbsp;</td>
+      <td>
+	  
+    </td>
+    </tr>
+   
+    <tr>
+      <td colspan="2" align="left"><input type="submit" name="button" id="button" value="Simpan" class="button_new" >
+     <a href="admin.php?page=admin/view/inbox_forward&id=<?php echo $_GET['id']; ?>"> <span class="button_new">Forward</span></a>
+      </td>
+    </tr>
+   
+  </table>
+</form>
+
+<br />

@@ -2,8 +2,8 @@
 session_start();
 $server = 'localhost';
 $username = 'root';
-$password = '4DM1nWeB';
-$database = 'bpm';
+$password = '';
+$database = 'bpm_new';
 
 include 'function.php';
 $Mysql = new Mysql();

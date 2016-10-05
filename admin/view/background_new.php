@@ -1,0 +1,1 @@
+<div id="background_img"><img class="bground" src="img/images/wall7.jpg" width="100%" height="100%" /></div>
