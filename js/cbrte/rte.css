@@ -1,0 +1,63 @@
+.rte_form{
+	
+}
+.rte_form table{
+		
+	}
+.rte_form table tr td{
+	vertical-align:top;
+	}
+.rte_form #toolbar1_rte1{
+	height:40px;
+	background-color:#f7f7f7;
+	
+}
+.rte_form #toolbar2_rte1{
+	height:40px;
+	
+}
+
+
+.rteImage {
+	background-color:#f7f7f7;
+	
+	cursor: pointer;
+	cursor: hand;
+}
+
+
+.rteImageRaised, .rteImage:hover {
+	background: #ddd;
+	
+	cursor: pointer;
+	cursor: hand;
+}
+
+.rteImageLowered, .rteImage:active {
+	background: #ddd;
+	
+	cursor: pointer;
+	cursor: hand;
+}
+
+.rteVertSep {
+	margin: 0 4px 0 4px;
+	
+}
+
+.rteBack {
+	background-color:#f7f7f7;
+	padding-top:10px;
+	letter-spacing: 0;
+	padding: 2px;
+	
+}
+
+.rteBack tbody tr td, .rteBack tr td {
+	background-color:#f7f7f7;
+	padding: 5px;
+	
+}
+#fontsize_rte1{
+	display:none;
+}

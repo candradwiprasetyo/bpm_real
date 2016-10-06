@@ -96,7 +96,7 @@ $page = $_GET['page'];
     	<td>Tampilkan</td>
     	<td><input type="checkbox" name="i_show" value="1" id="i_show"
     		<?php
-    		if ($go->active_status == 1){
+    		if (@$go->active_status == 1){
     			echo 'checked=""';
     		}
     		 ?>
@@ -106,22 +106,22 @@ $page = $_GET['page'];
     <tr>
       <td width="20%">Judul</td>
       <td>
-	  <input name="news_title" type="text" id="news_title" value="<?php echo $go->news_title ?>" class="field" />
-      <input name="img_id" type="hidden" class="field" id="img_id" value="<?php echo $go->img_id ?>" size="10" /></td>
+	  <input name="news_title" type="text" id="news_title" value="<?php echo @$go->news_title ?>" class="field" />
+      <input name="img_id" type="hidden" class="field" id="img_id" value="<?php echo @$go->img_id ?>" size="10" /></td>
     </tr>
 	<tr>
       <td width="20%" valign="top">Deskripsi Index</td>
-      <td><textarea name="news_desc_index" id="news_desc_index" cols="45" rows="5" class="area"><?php echo $go->news_desc_index ?></textarea></td>
+      <td><textarea name="news_desc_index" id="news_desc_index" cols="45" rows="5" class="area"><?php echo @$go->news_desc_index ?></textarea></td>
   </tr>
      <tr>
       <td>Foto</td>
       <td>
 	  <?php
 	  if($_GET['news_id']){ ?>
-      <img src="<?php echo $go->news_img ?>" height="100" /><br />
+      <img src="<?php echo @$go->news_img ?>" height="100" /><br />
 	  <?php } ?>
       <input type="file" name="img" id="img" />
-	  <a href="admin/controller/news_menu.php?req=delete_photo&news_id=<?php echo $_GET[news_id] ?>">Hapus</a>
+	  <a href="admin/controller/news_menu.php?req=delete_photo&news_id=<?php echo @$_GET[news_id] ?>">Hapus</a>
 	  </td>
 	  
     </tr>
@@ -129,7 +129,7 @@ $page = $_GET['page'];
 	<tr>
       <td width="20%">Sumber Foto</td>
       <td>
-	  <input name="news_img_sumber" type="text" id="news_img_sumber" value="<?php echo $go->news_img_sumber ?>" class="field" />
+	  <input name="news_img_sumber" type="text" id="news_img_sumber" value="<?php echo @$go->news_img_sumber ?>" class="field" />
 	  
      </td>
     </tr>

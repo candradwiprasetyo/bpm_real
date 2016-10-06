@@ -37,18 +37,18 @@ $page = $_GET['page'];
   <table width="100%" border="0" cellspacing="0" cellpadding="2">
     <tr>
       <td width="20%">Judul</td>
-      <td><input name="name" type="text" id="name" value="<?php echo $go->name ?>" class="field" /></td>
+      <td><input name="name" type="text" id="name" value="<?php echo @$go->name ?>" class="field" /></td>
     </tr>
       <tr>
       <td width="20%" valign="top">Deskripsi</td>
-      <td valign="top"><textarea name="description" id="description" cols="45" rows="5" class="area" style="font-size:small;"><?php echo $go->description ?></textarea></td>
+      <td valign="top"><textarea name="description" id="description" cols="45" rows="5" class="area" style="font-size:small;"><?php echo @$go->description ?></textarea></td>
     </tr>
      <tr>
       <td valign="top">Foto</td>
       <td valign="top">
 	  <?php
 	  if($_GET['pic_id']){ ?>
-      <img src="<?php echo $go->location; ?>" width="300" /><br />
+      <img src="<?php echo @$go->location; ?>" width="300" /><br />
 	  <?php } ?>
       <input type="file" name="location" id="location" /></td>
     </tr>

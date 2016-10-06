@@ -3,6 +3,15 @@
   <tr>
     <td width="58%">
      <?php
+     $_GET['add'] = (isset($_GET['add'])) ? $_GET['add'] : '';
+     $_POST['search_field'] = (isset($_POST['search_field'])) ? $_POST['search_field'] : '';
+     $_GET['news_id'] = (isset($_GET['news_id'])) ? $_GET['news_id'] : '';
+     $_POST['category_search_field'] = (isset($_POST['category_search_field'])) ? $_POST['category_search_field'] : '';
+     $_SESSION['category_search_field'] = (isset($_SESSION['category_search_field'])) ? $_SESSION['category_search_field'] : '';
+     $_GET['city_id'] = (isset($_GET['city_id'])) ? $_GET['city_id'] : '';
+     $_GET['album_id'] = (isset($_GET['album_id'])) ? $_GET['album_id'] : '';
+     $_GET['publication_id'] = (isset($_GET['publication_id'])) ? $_GET['publication_id'] :  '';
+     $_GET['pic_id'] = (isset($_GET['pic_id'])) ? $_GET['pic_id'] : '';
     $page_menu = $_GET['page'];
 	$p = explode("/", $page_menu);
 	if($page_menu == "admin/view/album_pic"){
@@ -92,6 +101,7 @@
        $j1 = $_GET['page'];
 	   $j2 = explode("/", $j1);
 	   $j3 = explode("_", $j2[2]);
+	   $judul = '';
 	   for($k = 0; $k < count($j3); $k++){
 		   $judul .= " ".$j3[$k]; 
 	   }
@@ -103,6 +113,7 @@
 	   $judul = str_replace("berita bidang2",'berita bidang',$judul);
 	   $judul = str_replace("berita kabupaten / kota2",'berita kabupaten / kota',$judul);
 	   //$judul = str_replace("investment guide",'panduan investasi',$judul);
+	   $_GET['ig_type'] = (isset($_GET['ig_type'])) ? $_GET['ig_type'] : '';
 	   if($_GET['ig_type'] == 1){ $judul = "Negative Investment List"; }else 
 	   if($_GET['ig_type'] == 2){ $judul = "Langkah-Langkah Investasi"; }else 
 	   if($_GET['ig_type'] == 3){ $judul = "Hukum dan Regulasi"; }else

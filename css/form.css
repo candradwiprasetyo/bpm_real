@@ -1,0 +1,213 @@
+/* CSS Document */
+.button{
+	background:#4E69A2;color:#FFF;font-weight:bold;padding:10px;-moz-border-radius:5px;border:none;cursor:pointer;
+	border-radius:2px;
+}
+.button:hover{
+	background:#191970;
+}
+.form{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+.form .field{
+	background-color:#FFF;
+	border:1px solid #CCC;
+	padding:6px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	font-weight:bold;
+	color:#666;
+	width:300px;
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomleft:10px;
+}
+.form .field:focus{
+	background-color:#EEF;
+	border:1px solid #AAA;
+}
+.form .field2{
+	background-color:#FFF;
+	border:1px solid #CCC;
+	padding:6px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	font-weight:bold;
+	color:#666;
+	width:200px;
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomleft:10px;
+}
+.form .field2:focus{
+	background-color:#EEF;
+	border:1px solid #AAA;
+}
+.form .field3{
+	background-color:#FFF;
+	border:1px solid #CCC;
+	padding:6px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	font-weight:bold;
+	color:#666;
+	width:150px;
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomleft:10px;
+}
+.form .field3:focus{
+	background-color:#EEF;
+	border:1px solid #AAA;
+}
+.form .area{
+	background-color:#FFF;
+	padding:6px;
+	border:1px solid #CCC;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	font-weight:bold;
+	color:#666;
+	width:300px;
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomleft:10px;
+}
+.form .area:focus{
+	background-color:#EEF;
+	border:1px solid #AAA;
+}
+.form .list{
+	background-color:#FFF;
+	border:1px solid #CCC;
+	padding:6px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:small;
+	font-weight:bold;
+	color:#666;
+	width:312px;
+	-moz-border-radius-topright:10px;
+	-moz-border-radius-bottomleft:10px;
+}
+.form .list:focus{
+	background-color:#EEF;
+	border:1px solid #AAA;
+}
+.form .file{
+	font-weight:bold;
+	padding:10px;
+	height:30px;
+}
+.form .link_orange{
+	background:#C93;color:#FFF;font-weight:bold;padding:12px;-moz-border-radius:5px;border:none;cursor:pointer;
+}
+.form .link_orange:hover{
+	background:#FC3;color:#FFF;font-weight:bold;padding:12px;-moz-border-radius:5px;border:none;cursor:pointer;
+}
+.table{
+	font-family:Arial, Helvetica, sans-serif;
+	border-top:1px dashed #CCC;
+	padding-bottom:5px;
+	border-bottom:1px dashed #CCC;
+	font-weight:bold;
+	font-size:small;
+}
+.table .tr{
+	font-size:12px;
+	background-color:#f7f7f7;
+	font-weight:normal;
+}
+.table .tr:hover{
+	background-color:#FFC;
+	font-weight:normal;
+}
+.table .tr2{
+	font-size:12px;
+	background-color:#ffffff;
+	font-weight:normal;
+}
+.table .tr2:hover{
+	font-size:12px;
+	background-color:#FFC;
+	font-weight:normal;
+}
+.table .td{
+	padding:3px;
+	padding-left:5px;
+}
+
+/*
+---------------------------------------Area--------------------------------------------------------------
+*/
+.form #description{
+	background-color:#FFF;border:1px solid #CCC;padding:6px;font-family:Arial, Helvetica, sans-serif;font-size:medium;
+	font-weight:bold;color:#666;width:300px;-moz-border-radius-topright:12px;-moz-border-radius-bottomleft:12px;
+}
+.form #description:focus{
+	background-color:#EEF;
+	border:1px solid #AAA;
+}
+/*
+-------------------------------------------Button-----------------------------------------------------------
+*/
+.form #button{
+	background:#4E69A2;color:#FFF;font-weight:bold;padding:10px;-moz-border-radius:5px;border:none;cursor:pointer;
+	border-radius:3px;
+}
+.form #button:hover{
+	background:#191970;
+}
+.form #button2{
+	background:#4E69A2;color:#FFF;font-weight:bold;padding:10px;-moz-border-radius:5px;border:none;cursor:pointer;border-radius:3px;
+}
+.form #button2:hover{
+	background:#191970;
+}
+.form #search{
+	background:#396;color:#FFF;font-weight:bold;padding:10px;-moz-border-radius:5px;border:none;cursor:pointer;
+}
+.form #search:hover{
+	background:#3C6;
+}
+.form #add{
+	background:#396;color:#FFF;font-weight:bold;padding:10px;-moz-border-radius:5px;border:none;cursor:pointer;
+}
+.form #add:hover{
+	background:#3C6;
+}
+
+.form #search{
+	background:#930;color:#FFF;font-weight:bold;padding:10px;-moz-border-radius:5px;border:none;cursor:pointer;
+}
+.form #search:hover{
+	background:#960;
+}
+/*
+-------------------------------------------------------Link----------------------------------------------------
+*/
+
+.backtoinput{
+	background:#4E69A2;color:#FFF;font-weight:bold;padding:10px;-moz-border-radius:5px;border:none;cursor:pointer;
+	border-radius:3px;
+}
+.backtoinput:hover{
+	background-color:#191970;
+}.refresh{
+	background-color:#930;
+	padding:10px;
+	color:#fff;
+	font-weight:bold;
+	cursor:pointer;
+	-moz-border-radius:5px;
+	outline:none;
+}
+.refresh:hover{
+	background-color:#960;
+}
+.page_kanan{
+	margin-top:10px;
+	text-align:right;
+}
+.page{
+	background:#4E69A2;color:#FFF;font-weight:bold;padding:5px;-moz-border-radius:5px;border:none;
+	border-radius:3px; float:left;
+	margin-right:5px;
+}

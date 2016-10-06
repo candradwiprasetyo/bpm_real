@@ -57,7 +57,7 @@ $go = mysql_fetch_object($q);?>
       $quti = mysql_query("select * from cities  order by city_id");
 	  while($ruti = mysql_fetch_object($quti)){
 	  ?>
-    	  <option value="<?php echo $ruti->city_id ?>" <?php if($go->city_id == $ruti->city_id){?> selected="selected"  <?php } ?>><?php echo $ruti->city_name?></option>
+    	  <option value="<?php echo $ruti->city_id ?>" <?php if(@$go->city_id == $ruti->city_id){?> selected="selected"  <?php } ?>><?php echo $ruti->city_name?></option>
     	  <?php
 	  }
 		?>
@@ -66,7 +66,7 @@ $go = mysql_fetch_object($q);?>
     	<td>Tampilkan</td>
     	<td><input type="checkbox" name="i_show" value="1" id="i_show"
     		<?php
-    		if ($go->active_status == 1){
+    		if (@$go->active_status == 1){
     			echo 'checked=""';
     		}
     		 ?>
@@ -75,15 +75,15 @@ $go = mysql_fetch_object($q);?>
    
     <tr>
       <td width="20%">Judul</td>
-      <td><input name="news_title" type="text" id="news_title" value="<?php echo $go->news_title ?>" class="field" />
-      <input name="img_id" type="hidden" class="field" id="img_id" value="<?php echo $go->img_id ?>" size="10" /></td>
+      <td><input name="news_title" type="text" id="news_title" value="<?php echo @$go->news_title ?>" class="field" />
+      <input name="img_id" type="hidden" class="field" id="img_id" value="<?php echo @$go->img_id ?>" size="10" /></td>
     </tr>
      <tr>
       <td>Foto</td>
       <td>
 	  <?php
 	  if($_GET['news_id']!=""){ ?>
-      <img src="<?php echo $go->news_img ?>" height="100" /><br />
+      <img src="<?php echo @$go->news_img ?>" height="100" /><br />
 	  <?php } ?>
       <input type="file" name="img" id="img" /></td>
     </tr>

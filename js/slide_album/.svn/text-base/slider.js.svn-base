@@ -1,0 +1,60 @@
+// JavaScript Document
+
+$(document).ready(function() {
+		//Thumbnailer.config.shaderOpacity = 1;
+		var tn1 = $('.mygallery').tn3({
+skinDir:"skins",
+imageClick:"fullscreen",
+image:{
+maxZoom:1.5,
+crop:true,
+clickEvent:"dblclick",
+transitions:[{
+type:"blinds"
+},{
+type:"grid"
+},{
+type:"grid",
+duration:460,
+easing:"easeInQuad",
+gridX:1,
+gridY:8,
+// flat, diagonal, circle, random
+sort:"random",
+sortReverse:false,
+diagonalStart:"bl",
+// fade, scale
+method:"scale",
+partDuration:360,
+partEasing:"easeOutSine",
+partDirection:"left"
+}]
+}
+		});
+});
+
+	
+	
+   skyscanner.load("snippets","2");
+  	 function main(){
+       var snippet = new skyscanner.snippets.SearchPanelControl();
+       snippet.setMarket("ID")
+       snippet.setCulture("id-ID");
+       snippet.setCurrency("IDR");
+       snippet.setShape("box300x250");
+       snippet.setColourScheme("classicbluedark");
+       snippet.setProduct("flights","1");
+
+       snippet.draw(document.getElementById("snippet_searchpanel"));
+   		}
+  	 skyscanner.setOnLoadCallback(main);
+  	 
+  	 function state_location(){
+  	 	var e = document.getElementById("state_location");
+  	    var str = e.options[e.selectedIndex].value;
+  	    
+  	     if (str != ''){
+  	     	document.location = str ;
+  	     }
+  	    
+  	 }

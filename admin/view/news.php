@@ -73,7 +73,7 @@ $kategori = array(0=>'Kinerja Investasi', 1=>'Pejabat Pengelola Informasi & Doku
     	<td>Tampilkan</td>
     	<td><input type="checkbox" name="i_show" value="1" id="i_show"
     		<?php
-    		if ($go->active_status == 1){
+    		if (@$go->active_status == 1){
     			echo 'checked=""';
     		}
     		 ?>
@@ -82,12 +82,12 @@ $kategori = array(0=>'Kinerja Investasi', 1=>'Pejabat Pengelola Informasi & Doku
     </tr>
     <tr>
       <td width="20%">Judul</td>
-      <td><input name="news_title" type="text" id="news_title" value="<?php echo $go->news_title ?>" class="field" />
-      <input name="img_id" type="hidden" class="field" id="img_id" value="<?php echo $go->img_id ?>" size="10" /></td>
+      <td><input name="news_title" type="text" id="news_title" value="<?php echo @$go->news_title ?>" class="field" />
+      <input name="img_id" type="hidden" class="field" id="img_id" value="<?php echo @$go->img_id ?>" size="10" /></td>
     </tr>
     <tr>
       <td width="20%" valign="top">Deskripsi Index</td>
-      <td><textarea name="news_desc_index" id="news_desc_index" cols="45" rows="5" class="area"><?php echo $go->news_desc_index ?></textarea></td>
+      <td><textarea name="news_desc_index" id="news_desc_index" cols="45" rows="5" class="area"><?php echo @$go->news_desc_index ?></textarea></td>
   </tr>
      <tr>
       <td>Foto</td>

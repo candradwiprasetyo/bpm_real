@@ -36,19 +36,19 @@ $page = $_GET['page'];
   <table width="100%" border="0" cellspacing="0" cellpadding="2">
     <tr>
       <td width="20%">Nama</td>
-      <td><input name="city_name" type="text" id="city_name" value="<?php echo $go->city_name ?>" class="field" /></td>
+      <td><input name="city_name" type="text" id="city_name" value="<?php echo @$go->city_name ?>" class="field" /></td>
     </tr>
      <tr>
       <td width="20%">Alamat</td>
-      <td><input name="city_address" type="text" id="city_address" value="<?php echo $go->city_address ?>" class="field" /></td>
+      <td><input name="city_address" type="text" id="city_address" value="<?php echo @$go->city_address ?>" class="field" /></td>
     </tr>
      <tr>
       <td width="20%">Telepon</td>
-      <td><input name="city_phone" type="text" class="field" id="city_phone" value="<?php echo $go->city_phone ?>" size="20" /></td>
+      <td><input name="city_phone" type="text" class="field" id="city_phone" value="<?php echo @$go->city_phone ?>" size="20" /></td>
     </tr>
      <tr>
       <td width="20%">Email</td>
-      <td><input name="city_email" type="text" id="city_email" value="<?php echo $go->city_email ?>" class="field" /></td>
+      <td><input name="city_email" type="text" id="city_email" value="<?php echo @$go->city_email ?>" class="field" /></td>
     </tr>
     <tr>
       <td>&nbsp;</td>
