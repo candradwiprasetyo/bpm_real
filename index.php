@@ -67,6 +67,14 @@ include 'libraries/lib.php';
 </script>
 <script src="js/validasi.js"></script>
 
+<script type="text/javascript">
+  function openPopup() {
+      window.location.hash = 'openModal';
+  }
+
+  window.onload = openPopup;
+</script>
+
 </head>
 <body style="top:0px !important;">
 
@@ -99,6 +107,8 @@ include 'libraries/lib.php';
 <!-- Footer Bottom -->
 <?php include 'index/footer_bottom.php'; ?>
 
+<!-- Footer Bottom -->
+<?php include 'index/popup_home.php'; ?>
 
 </body>
 </html>

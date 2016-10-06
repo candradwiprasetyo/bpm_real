@@ -51,7 +51,7 @@
 	 ){
 	?>
      <a href="<?php echo $link ?>">
-<div class="add_config"></div>
+<div class="add_config">Tambah</div>
 </a>
     <?php
 	}
