@@ -38,8 +38,8 @@ if(isset($_GET['err']) && $_GET['err']==1){
 ?>
 
 <?php
-if($_GET['user_id'] || $_GET['add'] == 1){
-$q_data = mysql_query("select * from user where user_id = '".$_GET['user_id']."'");
+if(@$_GET['user_id'] || $_GET['add'] == 1){
+$q_data = mysql_query("select * from user where user_id = '".@$_GET['user_id']."'");
 $go = mysql_fetch_object($q_data);
 ?>
 
@@ -48,7 +48,7 @@ $go = mysql_fetch_object($q_data);
   <table width="100%" border="0" cellspacing="0" cellpadding="2">
     <tr>
       <td width="20%">Nama</td>
-      <td><input name="user_name" type="text" id="user_name" value="<?php echo $go->user_name ?>" class="field" /></td>
+      <td><input name="user_name" type="text" id="user_name" value="<?php echo @$go->user_name ?>" class="field" /></td>
     </tr>
      <tr>
       <td>Foto</td>
@@ -62,7 +62,7 @@ $go = mysql_fetch_object($q_data);
     <tr>
       <td valign="top">Jenis Kelamin</td>
       <td valign="top"> <?php 
-	  if($go->user_gender=="P"){
+	  if(@$go->user_gender=="P"){
 	  ?> 
        <input name="user_gender" type="radio" id="radio" value="L" >
       Laki-laki
@@ -78,15 +78,15 @@ $go = mysql_fetch_object($q_data);
     </tr>
     <tr>
       <td>Alamat</td>
-      <td><input name="user_address" type="text" id="user_address" value="<?php echo $go->user_address ?>" class="field"  /></td>
+      <td><input name="user_address" type="text" id="user_address" value="<?php echo @$go->user_address ?>" class="field"  /></td>
     </tr>
     <tr>
       <td>Telepon</td>
-      <td><input name="user_phone" type="text" id="user_phone" value="<?php echo $go->user_phone ?>" class="field"  /></td>
+      <td><input name="user_phone" type="text" id="user_phone" value="<?php echo @$go->user_phone ?>" class="field"  /></td>
     </tr>
     <tr>
       <td>Email</td>
-      <td><input name="user_email" type="text" id="user_email" value="<?php echo $go->user_email ?>" class="field"  /></td>
+      <td><input name="user_email" type="text" id="user_email" value="<?php echo @$go->user_email ?>" class="field"  /></td>
     </tr>
      <tr>
       <td>Hak Akses</td>
@@ -96,7 +96,7 @@ $go = mysql_fetch_object($q_data);
 	  while($ruti = mysql_fetch_object($quti)){
 	  ?>
       
-        <option value="<?php echo $ruti->user_type_id ?>" <?php if($go->user_type_id == $ruti->user_type_id){?> selected="selected"  <?php } ?>><?php echo $ruti->user_type_name?></option>
+        <option value="<?php echo $ruti->user_type_id ?>" <?php if(@$go->user_type_id == $ruti->user_type_id){?> selected="selected"  <?php } ?>><?php echo $ruti->user_type_name?></option>
         <?php
 	  }
 		?>
@@ -104,7 +104,7 @@ $go = mysql_fetch_object($q_data);
     </tr>
     <tr>
       <td>Username</td>
-      <td><input name="user_username" type="text" id="user_username" value="<?php echo $go->user_username ?>"  class="field" /></td>
+      <td><input name="user_username" type="text" id="user_username" value="<?php echo @$go->user_username ?>"  class="field" /></td>
     </tr>
     <tr>
       <td>Password</td>
@@ -120,7 +120,7 @@ $go = mysql_fetch_object($q_data);
 	  
     </td>
     </tr>
-     <?php if($_GET['user_id']){ ?>
+     <?php if(@$_GET['user_id']){ ?>
     <tr>
      <td colspan="2" align="left">
        <table width="100%" border="0" cellspacing="0" cellpadding="4">

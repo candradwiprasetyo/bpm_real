@@ -46,11 +46,11 @@ $page = $_GET['page'];
   <table width="100%" border="0" cellspacing="0" cellpadding="2">
     <tr>
       <td width="20%">Judul</td>
-      <td><input name="publication_title" type="text" id="publication_title" value="<?php echo $go->publication_title ?>" class="field" /></td>
+      <td><input name="publication_title" type="text" id="publication_title" value="<?php echo @$go->publication_title ?>" class="field" /></td>
     </tr>
       <tr>
       <td width="20%" valign="top">Deskripsi</td>
-      <td valign="top"><textarea name="publication_description" id="publication_description" cols="45" rows="5" style="font-size:small;" class="area"><?php echo $go->publication_description ?></textarea></td>
+      <td valign="top"><textarea name="publication_description" id="publication_description" cols="45" rows="5" style="font-size:small;" class="area"><?php echo @$go->publication_description ?></textarea></td>
     </tr>
     <tr>
       <td>&nbsp;</td>

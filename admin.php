@@ -37,7 +37,7 @@ include 'admin/view/login2.php';
 	
 <body leftmargin="0" rightmargin="0" onLoad="startTime()">
 <?php
-include 'admin/view/background_new.php';
+//include 'admin/view/background_new.php';
 ?>
 <div class="banner"></div>
 <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" id="table_admin">
@@ -75,14 +75,12 @@ include 'admin/view/background_new.php';
     <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="25%" rowspan="2" valign="top"><?php include 'admin/admin_new/menu_kanan.php'; ?></td>
-        <td width="75%" valign="top" style=" background:url(img/images/bg-noise.png) #D8E1E8 repeat;">
+        <td width="75%" valign="top" style="background: #E9F0F5;">
         <?php include 'admin/admin_new/content.php'; ?>
         
         </td>
       </tr>
-      <tr>
-        <td valign="bottom" style=" background:url(img/images/bg-noise.png) #D8E1E8 repeat;"><div class="copyright">Copyright@2013 by <a href="http://www.malloci.com" style="text-decoration:none; color:#666;"><strong>Malloci</strong></a></div></td>
-      </tr>
+     
     </table></td>
   </tr>
 </table>

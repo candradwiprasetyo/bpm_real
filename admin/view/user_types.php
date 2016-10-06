@@ -36,13 +36,13 @@ $page = $_GET['page'];
   <table width="100%" border="0" cellspacing="0" cellpadding="2">
     <tr>
       <td width="20%">Nama</td>
-      <td><input name="user_type_name" type="text" id="user_type_name" value="<?php echo $go->user_type_name ?>" class="field" /></td>
+      <td><input name="user_type_name" type="text" id="user_type_name" value="<?php echo @$go->user_type_name ?>" class="field" /></td>
     </tr>
     <tr>
       <td>Tipe</td>
       <td><select name="user_type_type" id="user_type_type" class="list">
-      <option value="1" <?php if($go->user_type_type == 1){ ?> selected="selected"<?php }?>>Bidang</option>
-      <option value="2" <?php if($go->user_type_type == 2){ ?> selected="selected"<?php }?>>Kabupaten / Kota</option>
+      <option value="1" <?php if(@$go->user_type_type == 1){ ?> selected="selected"<?php }?>>Bidang</option>
+      <option value="2" <?php if(@$go->user_type_type == 2){ ?> selected="selected"<?php }?>>Kabupaten / Kota</option>
       </select>
 	  
       </td>

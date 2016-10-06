@@ -14,7 +14,7 @@ $page = $_GET['page'];
     </tr>
     <?php
 	$key="";
-	 if($_POST['hidden_key']){
+	 if(@$_POST['hidden_key']){
   $key = "where user_name like '%".$_POST['keyword']."%'"; 
   }
     $a = mysql_query("select * from user_types where user_type_id <> 1 and user_type_type = '1'".$key."");

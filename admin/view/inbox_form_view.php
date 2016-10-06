@@ -7,7 +7,7 @@ $r = mysql_fetch_object($q);
 $q2 = mysql_query("select * from answers where question_id = '".$_GET['id']."'");
 $r2 = mysql_fetch_object($q2);
 
-$q3 = mysql_query("select * from user where user_id = '".$r2->user_id."'");
+$q3 = mysql_query("select * from user where user_id = '".@$r2->user_id."'");
 $r3 = mysql_fetch_object($q3);
 
 ?>
@@ -42,7 +42,7 @@ $r3 = mysql_fetch_object($q3);
     </tr>
      <tr>
       <td>Penjawab</td>
-      <td><input name="penjawab" type="text" class="field" id="penjawab" value="<?php echo $r3->user_name ?>" size="50" readonly="readonly" />
+      <td><input name="penjawab" type="text" class="field" id="penjawab" value="<?php echo @$r3->user_name ?>" size="50" readonly="readonly" />
 	  
       </td>
     </tr>

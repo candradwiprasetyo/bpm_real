@@ -12,6 +12,9 @@
      $_GET['album_id'] = (isset($_GET['album_id'])) ? $_GET['album_id'] : '';
      $_GET['publication_id'] = (isset($_GET['publication_id'])) ? $_GET['publication_id'] :  '';
      $_GET['pic_id'] = (isset($_GET['pic_id'])) ? $_GET['pic_id'] : '';
+     $_GET['user_id'] = (isset($_GET['user_id'])) ? $_GET['user_id'] : '';
+     $_GET['user_type_id'] = (isset($_GET['user_type_id'])) ? $_GET['user_type_id'] : '';
+     $_GET['id'] = (isset($_GET['id'])) ? $_GET['id'] : '';
     $page_menu = $_GET['page'];
 	$p = explode("/", $page_menu);
 	if($page_menu == "admin/view/album_pic"){
@@ -63,7 +66,7 @@
 
 </td>
 <td width="2%">
-<div class="config"></div>
+<!-- <div class="config"></div> -->
 
 </td>
     <td width="40%" align="right">

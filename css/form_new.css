@@ -1,9 +1,9 @@
 /* CSS Document */
 
 .table{
-	-moz-box-shadow:0px 0px 2px #999;
-    -webkit-box-shadow:0px 0px 2px #999;
-    box-shadow:0px 0px 2px #999;
+	-moz-box-shadow:0px 0px 5px #ccc;
+    -webkit-box-shadow:0px 0px 5px #ccc;
+    box-shadow:0px 0px 5px #ccc;
 	border-radius:5px;
 }
 .table .judul{
@@ -11,13 +11,19 @@
 	height:40px;
 	font-weight:bold;
 	border-radius:5px;
-	background:url(../img/images/tab_img2.gif) repeat-x;
+	/*background:url(../img/images/tab_img2.gif) repeat-x;*/
+	background: #fff;
 	text-shadow: #fff 1px 1px 1px;
 	border-top-left-radius:5px;
 	border-top-right-radius:5px;
+	border-bottom: 1px solid #eee;
+}
+
+.table .judul td{
+	border-bottom: 1px solid #eee;
 }
 .table .tr{
-	background-color:#ffc;
+	background-color:#fff;
 	border-bottom:1px solid #000;
 }
 .table .tr:hover{
@@ -28,7 +34,7 @@
 	color:#fff;
 }
 .table .tr2{
-	background-color:#ffc;
+	background-color:#F3F5F9;
 	border-bottom:1px dotted #FFDF55;
 }
 .table .tr2:hover{
