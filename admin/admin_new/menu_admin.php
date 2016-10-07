@@ -23,7 +23,7 @@
     <a href="admin.php?page=admin/view/news_menu_bidang" style="text-decoration:none;"><div class="fpanela" >Berita Bidang</div></a>
     <a href="admin.php?page=admin/view/news_city" style="text-decoration:none;"><div class="fpanela" >Berita Kabupaten</div></a>
      <a href="admin.php?page=admin/view/kabupaten" style="text-decoration:none;"><div class="fpanela" >Kabupaten / Kota</div></a>
-    <a href="admin.php?page=admin/view/ppid" style="text-decoration:none;"><div class="fpanela" >PPID</div></a>
+    <!-- <a href="admin.php?page=admin/view/ppid" style="text-decoration:none;"><div class="fpanela" >PPID</div></a> -->
     
  	<a href="admin.php?page=admin/view/album" style="text-decoration:none;"><div class="fpanela" >Album</div></a>
  	
@@ -100,6 +100,7 @@ $query_data_cq = mysql_fetch_row($result_cq);
   <a href="admin.php?page=admin/view/profile" style="text-decoration:none"><div class="fpanela" >Profil</div></a>
   <a href="admin.php?page=admin/view/upload_image" style="text-decoration:none"><div class="fpanela" >Upload Gambar</div></a>
     <a href="admin.php?page=admin/view/upload_file" style="text-decoration:none"><div class="fpanela" >Upload File</div></a>
+     <a href="admin.php?page=admin/view/popup_home" style="text-decoration:none"><div class="fpanela" >Popup Home</div></a>
       </div>
     </div>
     

@@ -15,7 +15,7 @@
      $_GET['user_id'] = (isset($_GET['user_id'])) ? $_GET['user_id'] : '';
      $_GET['user_type_id'] = (isset($_GET['user_type_id'])) ? $_GET['user_type_id'] : '';
      $_GET['id'] = (isset($_GET['id'])) ? $_GET['id'] : '';
-    $page_menu = $_GET['page'];
+    $page_menu = (isset($_GET['page'])) ? $_GET['page'] : 'admin/view/news';
 	$p = explode("/", $page_menu);
 	if($page_menu == "admin/view/album_pic"){
 		$link = "admin.php?page=".$page_menu."&album_id=".$_GET['album_id']."&add=1";
@@ -57,11 +57,11 @@
 	}
 	?>
     <a href="javascript:history.back();">
-<div class="kembali_config"></div>
+<div class="kembali_config">Kembali</div>
 </a>
 
  <a href="javascript:location.reload();">
-<div class="refresh_config"></div>
+<div class="refresh_config">Refresh</div>
 </a>
 
 </td>
@@ -72,6 +72,7 @@
     <td width="40%" align="right">
     <div>
     <?php
+    $_GET['page'] = (isset($_GET['page'])) ? $_GET['page'] : 'admin/view/news';
 	if($_GET['page'] == "admin/view/album_pic"){
 		$link_search = "admin.php?page=".$_GET['page']."&album_id=".$_GET['album_id'];
 	}else if($_GET['page'] == "admin/view/east_java_investment_pic"){
@@ -115,6 +116,7 @@
 	   $judul = str_replace("city",'kabupaten / kota',$judul);
 	   $judul = str_replace("berita bidang2",'berita bidang',$judul);
 	   $judul = str_replace("berita kabupaten / kota2",'berita kabupaten / kota',$judul);
+	   $judul = str_replace("buku biru",'potensi dan peluang investasi jawa timur',$judul);
 	   //$judul = str_replace("investment guide",'panduan investasi',$judul);
 	   $_GET['ig_type'] = (isset($_GET['ig_type'])) ? $_GET['ig_type'] : '';
 	   if($_GET['ig_type'] == 1){ $judul = "Negative Investment List"; }else 
@@ -138,7 +140,7 @@
     }
           
 		  
-						   $page = $_GET['page'];
+						   $page = (isset($_GET['page'])) ? $_GET['page'] : 'admin/view/news';
 						  if($page){
 							  try{
 						  	MyInclude($page.".php");

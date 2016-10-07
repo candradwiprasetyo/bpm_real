@@ -77,22 +77,38 @@ body{
 	
 }
 .add_config{
-	padding-top:5px;
-	width:128px;
-	height:40px;
+	margin: 10px;
+	margin-right: 0px;
+	width:120px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	cursor: pointer;
+	height:30px;
 	/*background:url(../img/images/add_new.png) no-repeat;*/
 	float:left;
+	background: #00c0ef;
+	border-color:#00acd6;
+	border-radius: 4px;
 }
 
 .add_config:hover{
 	
 }
 .kembali_config{
-	padding-top:5px;
-	width:128px;
-	height:40px;
-	background:url(../img/images/config_kembali.png) no-repeat;
+	margin: 10px;
+	margin-right: 0px;
+	width:120px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	cursor: pointer;
+	height:30px;
+	/*background:url(../img/images/add_new.png) no-repeat;*/
 	float:left;
+	background: #f56954;
+	border-color:#f4543c;
+	border-radius: 4px;
 }
 
 .kembali_config:hover{
@@ -100,11 +116,19 @@ body{
 }
 
 .refresh_config{
-	padding-top:5px;
-	width:128px;
-	height:40px;
-	background:url(../img/images/refresh_config.png) no-repeat;
+	margin: 10px;
+	margin-right: 0px;
+	width:120px;
+	text-align: center;
+	line-height: 30px;
+	color: #fff;
+	cursor: pointer;
+	height:30px;
+	/*background:url(../img/images/add_new.png) no-repeat;*/
 	float:left;
+	background: #00a65a;
+	border-color:#008d4c;
+	border-radius: 4px;
 }
 
 .refresh_config:hover{
@@ -124,7 +148,7 @@ body{
 	cursor:text;
 }
 .search_field{
-	margin-top:4px;
+	margin-top:0px;
 	width:200px;
 	height:20px;
 	border:none;
@@ -132,6 +156,8 @@ body{
 	border-bottom-left-radius:5px;
 	padding:5px;
 	color:#999;
+	border:1px solid #ccc;
+	border-radius: 4px;
 }
 .config{
 	padding-top:5px;

@@ -27,22 +27,22 @@
 	border-bottom:1px solid #000;
 }
 .table .tr:hover{
-	background:url(../img/images/tr_hover.gif) repeat-x;
-	border-top:1px solid #a6b3c6;
-	border-bottom:1px solid #798caa;
-	background-color:#8699BA;
-	color:#fff;
+	/*background:url(../img/images/tr_hover.gif) repeat-x;*/
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	background-color:#FFFFCC;
+
 }
 .table .tr2{
 	background-color:#F3F5F9;
 	border-bottom:1px dotted #FFDF55;
 }
 .table .tr2:hover{
-	background:url(../img/images/tr_hover.gif) repeat-x;
+	/*background:url(../img/images/tr_hover.gif) repeat-x;*/
 	border-top:1px solid #a6b3c6;
 	border-bottom:1px solid #798caa;
-	background-color:#8699BA;
-	color:#fff;
+	background-color:#FFFFCC;
+
 }
 .tr_img{
 	
@@ -81,7 +81,7 @@
 	float:right;
 	margin-right:5px;
 }
-.trash:hover{
+/*.trash:hover{
 	background:url(../img/images/del3.png) no-repeat;
 	width:20px;
 	-moz-border-radius:5px;
@@ -90,7 +90,7 @@
 	padding:2px;
 	cursor:pointer;
 	outline:none;
-}
+}*/
 .act{
 	background:url(../img/images/act.png) no-repeat;
 	width:20px;
@@ -115,6 +115,7 @@
 	float:right;
 	margin-right:5px;
 }
+/*
 .deact:hover{
 	background:url(../img/images/deact2.png) no-repeat;
 	width:20px;
@@ -124,7 +125,7 @@
 	padding:2px;
 	cursor:pointer;
 	outline:none;
-}
+}*/
 .act_dis{
 	background:url(../img/images/act.png) no-repeat;
 	width:20px;
@@ -137,7 +138,7 @@
 	float:right;
 	margin-right:5px;
 }
-.act:hover{
+/*.act:hover{
 	background:url(../img/images/act2.png) no-repeat;
 	width:20px;
 	-moz-border-radius:5px;
@@ -146,7 +147,7 @@
 	padding:2px;
 	cursor:pointer;
 	outline:none;
-}
+}*/
 .print{
 	background:url(../img/images/print2.png) no-repeat;
 	width:20px;
@@ -159,7 +160,7 @@
 	float:right;
 	margin-right:25px;
 }
-.print:hover{
+/*.print:hover{
 	background:url(../img/images/print.png) no-repeat;
 	width:20px;
 	-moz-border-radius:5px;
@@ -168,7 +169,7 @@
 	padding:2px;
 	cursor:pointer;
 	outline:none;
-}
+}*/
 .add_child{
 	text-decoration:none;
 	height:20px;
@@ -192,7 +193,7 @@
 	float:right;
 	margin-right:5px;
 }
-.edit:hover{
+/*.edit:hover{
 	background:url(../img/images/edit3.png) no-repeat;
 	width:20px;
 	-moz-border-radius:5px;
@@ -201,7 +202,7 @@
 	padding:2px;
 	cursor:pointer;
 	outline:none;
-}
+}*/
 .add{
 	background:url(../img/images/add.png) no-repeat;
 	width:20px;
@@ -214,7 +215,7 @@
 	float:right;
 	margin-right:5px;
 }
-.add:hover{
+/*.add:hover{
 	background:url(../img/images/add2.png) no-repeat;
 	width:20px;
 	-moz-border-radius:5px;
@@ -223,7 +224,7 @@
 	padding:2px;
 	cursor:pointer;
 	outline:none;
-}
+}*/
 .download{
 	background:url(../img/images/download.png) no-repeat;
 	width:20px;
@@ -236,7 +237,7 @@
 	float:right;
 	margin-right:5px;
 }
-.download:hover{
+/*.download:hover{
 	background:url(../img/images/download2.png) no-repeat;
 	width:20px;
 	-moz-border-radius:5px;
@@ -245,7 +246,7 @@
 	padding:2px;
 	cursor:pointer;
 	outline:none;
-}
+}*/
 
 .page_kanan{
 	margin-top:10px;
